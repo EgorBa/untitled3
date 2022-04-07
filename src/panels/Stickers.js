@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 
 import {Button, ModalCard, Panel, PanelHeader, PanelHeaderBack} from '@vkontakte/vkui';
 import bridge from "@vkontakte/vk-bridge";
+import MyModal from "../MyModal/MyModal";
 
 const stickers = [{
     id: 1,
@@ -18,28 +19,26 @@ const stickers = [{
     }]
 
 const Stickers = props => {
-    const [showModal, setShowModal] = useState(false)
-    // bridge.subscribe((e) => {
-    //     if(e.type === "VKWebAppShowOrderBoxResult") {
-    //         console.log(e.data.status);
-    //     }});
+    const [showSticker, setShowSticker] = useState(false)
+    const [modal, setModal] = useState(false)
+    const [data, setData] = useState({})
 
-
-    const show = () => {
-        bridge.send("VKWebAppShowOrderBox", {
-            type: "item",
-            item: "item_id_123"
-        })
-            .then(data => console.log(data.status))
-            .catch(error => console.log(error));
+    const showModal = (sticker) => {
+        setModal(true)
+        setData(sticker)
     }
 
-    const showHideClassName = () => {
-        setShowModal(true)
+    const submitTransaction = () => {
+        setModal(false)
+        setShowSticker(true)
+    }
+
+    const cancelTransaction = () => {
+        setModal(false)
     }
 
     const handleClose = () => {
-        setShowModal(false)
+        setShowSticker(false)
     }
 
     return (<Panel id={props.id}>
@@ -48,13 +47,16 @@ const Stickers = props => {
             >
                 Stickers
             </PanelHeader>
-            {showModal ?
+            {showSticker ?
                 <div style={{
                     display: "flex", padding: "5px", alignContent: "center", maxWidth: "600px",
                     maxHeight: "600px", flexDirection: "column"
                 }}>
+                    <h1>
+                        Ура! Вам выпал стикер
+                    </h1>
                     <img src="https://images.pexels.com/photos/20787/pexels-photo.jpg?auto=compress&cs=tinysrgb&h=350"/>
-                    <Button type="button" onClick={handleClose} stretched size="l" mode="secondary">
+                    <Button type="button" onClick={handleClose} stretched size="l" mode="secondary" style={{marginTop: "4px"}}>
                         Спасибо!
                     </Button>
                 </div>
@@ -72,15 +74,28 @@ const Stickers = props => {
                                 Коллекция : {sticker.name}
                             </h2>
                             <img src={sticker.src}/>
-                            <Button style={{marginTop: "4px"}} onClick={showHideClassName} stretched size="l">
+                            <Button style={{marginTop: "4px"}} onClick={_ => showModal(sticker)} stretched size="l">
                                 Купи меня за {sticker.price} голосов
                             </Button>
                         </div>
                     )}
                 </div>
             }
-
-
+            <MyModal visible={modal} setVisible={setModal}>
+                <h2>
+                    Вы уверены что хотите купить стикер из набора {data.name} за {data.price} голосов?
+                </h2>
+                <div style={{display:"flex"}}>
+                    <Button onClick={submitTransaction} stretched size="l"
+                            style={{marginLeft: "30px", marginRight: "30px"}}>
+                        Да
+                    </Button>
+                    <Button onClick={cancelTransaction} stretched size="l"
+                            style={{marginLeft: "30px", marginRight: "30px"}}>
+                        Нет
+                    </Button>
+                </div>
+            </MyModal>
         </Panel>
     );
 }
