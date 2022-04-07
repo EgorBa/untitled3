@@ -5,7 +5,7 @@ import { Panel, PanelHeader, Header, Button, Group, Cell, Div, Avatar } from '@v
 
 const Home = ({ id, go, fetchedUser }) => (
 	<Panel id={id}>
-		<PanelHeader>Example</PanelHeader>
+		<PanelHeader>Сайт Spring code</PanelHeader>
 		{fetchedUser &&
 		<Group header={<Header mode="secondary">User Data Fetched with VK Bridge</Header>}>
 			<Cell
@@ -16,7 +16,7 @@ const Home = ({ id, go, fetchedUser }) => (
 			</Cell>
 		</Group>}
 
-		<Group header={<Header mode="secondary">Navigation Example</Header>}>
+		<Group header={<Header mode="secondary">Выберите раздел</Header>}>
 			<Div>
 				<Button stretched size="l" mode="secondary" onClick={go} data-to="persik">
 					Show me the Persik, please
