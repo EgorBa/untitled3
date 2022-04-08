@@ -59,8 +59,12 @@ const Stickers = props => {
             </PanelHeader>
             {showSticker ?
                 <div style={{
-                    display: "flex", padding: "5px", alignContent: "center", maxWidth: "600px",
-                    maxHeight: "600px", flexDirection: "column"
+                    display: "flex", padding: "5px", alignContent: "center", maxWidth: "30%",
+                    maxHeight: "100%", flexDirection: "column",border: "5px",
+                    borderStyle: "solid",
+                    borderColor: "white",
+                    borderRadius: "10px",
+                    margin:"10px"
                 }}>
                     <h1 style={{
                         width: "100%",
@@ -69,7 +73,10 @@ const Stickers = props => {
                     }}>
                         Ура! Вам выпал стикер с номером {id % 200000}
                     </h1>
-                    <img src={"https://vk.com/sticker/" + id + "/256b.png"}/>
+                    <img style={{
+                        width: "100%",
+                        height: "100%",
+                    }}  src={"https://vk.com/sticker/" + id + "/256b.png"}/>
                     <Button type="button" onClick={handleClose} stretched size="l" mode="secondary"
                             style={{marginTop: "4px"}}>
                         Спасибо! Вернуться в магазин.
@@ -96,9 +103,12 @@ const Stickers = props => {
                                 textAlign: "center",
                                 alignContent: "center"
                             }}>
-                                Коллекция : {sticker.name}
+                                {sticker.name}
                             </h2>
-                            <img src={sticker.src}/>
+                            <img style={{
+                                width: "300px",
+                                height: "400px",
+                            }} src={sticker.src}/>
                             <Button style={{marginTop: "4px"}} onClick={_ => showModal(sticker)} stretched size="l">
                                 Купи меня за {sticker.price} голосов
                             </Button>
