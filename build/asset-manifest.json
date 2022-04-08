@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "/mini-app/static/css/main.94d9d93e.chunk.css",
-    "main.js": "/mini-app/static/js/main.c1a82d84.chunk.js",
-    "main.js.map": "/mini-app/static/js/main.c1a82d84.chunk.js.map",
-    "runtime-main.js": "/mini-app/static/js/runtime-main.10199c2c.js",
-    "runtime-main.js.map": "/mini-app/static/js/runtime-main.10199c2c.js.map",
-    "static/css/2.a2ab3232.chunk.css": "/mini-app/static/css/2.a2ab3232.chunk.css",
-    "static/js/2.500e8550.chunk.js": "/mini-app/static/js/2.500e8550.chunk.js",
-    "static/js/2.500e8550.chunk.js.map": "/mini-app/static/js/2.500e8550.chunk.js.map",
-    "index.html": "/mini-app/index.html",
-    "static/css/2.a2ab3232.chunk.css.map": "/mini-app/static/css/2.a2ab3232.chunk.css.map",
-    "static/css/main.94d9d93e.chunk.css.map": "/mini-app/static/css/main.94d9d93e.chunk.css.map",
-    "static/js/2.500e8550.chunk.js.LICENSE.txt": "/mini-app/static/js/2.500e8550.chunk.js.LICENSE.txt",
-    "static/media/persik.ae9f0072.png": "/mini-app/static/media/persik.ae9f0072.png"
+    "main.css": "/untitled3/static/css/main.eff58769.chunk.css",
+    "main.js": "/untitled3/static/js/main.76dc69f0.chunk.js",
+    "main.js.map": "/untitled3/static/js/main.76dc69f0.chunk.js.map",
+    "runtime-main.js": "/untitled3/static/js/runtime-main.bba8471d.js",
+    "runtime-main.js.map": "/untitled3/static/js/runtime-main.bba8471d.js.map",
+    "static/css/2.a2ab3232.chunk.css": "/untitled3/static/css/2.a2ab3232.chunk.css",
+    "static/js/2.4069ee80.chunk.js": "/untitled3/static/js/2.4069ee80.chunk.js",
+    "static/js/2.4069ee80.chunk.js.map": "/untitled3/static/js/2.4069ee80.chunk.js.map",
+    "index.html": "/untitled3/index.html",
+    "static/css/2.a2ab3232.chunk.css.map": "/untitled3/static/css/2.a2ab3232.chunk.css.map",
+    "static/css/main.eff58769.chunk.css.map": "/untitled3/static/css/main.eff58769.chunk.css.map",
+    "static/js/2.4069ee80.chunk.js.LICENSE.txt": "/untitled3/static/js/2.4069ee80.chunk.js.LICENSE.txt",
+    "static/media/persik.ae9f0072.png": "/untitled3/static/media/persik.ae9f0072.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.10199c2c.js",
+    "static/js/runtime-main.bba8471d.js",
     "static/css/2.a2ab3232.chunk.css",
-    "static/js/2.500e8550.chunk.js",
-    "static/css/main.94d9d93e.chunk.css",
-    "static/js/main.c1a82d84.chunk.js"
+    "static/js/2.4069ee80.chunk.js",
+    "static/css/main.eff58769.chunk.css",
+    "static/js/main.76dc69f0.chunk.js"
   ]
 }
