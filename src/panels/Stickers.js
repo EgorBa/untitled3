@@ -53,7 +53,7 @@ const Stickers = props => {
 
     return (<Panel id={props.id}>
             <PanelHeader
-                left={<PanelHeaderBack onClick={props.go} data-to="home"/>}
+                left={<PanelHeaderBack onClick={showSticker ? handleClose : props.go} data-to="home"/>}
             >
                 Магазин кастомных Персиков
             </PanelHeader>
