@@ -99,7 +99,7 @@ const Stickers = props => {
                             height: "400px",
                             margin: "10px",
                             padding: "5px",
-                            paddingBottom: "15px",
+                            paddingBottom: "20px",
                             border: "5px",
                             borderStyle: "solid",
                             borderColor: "#5376A2",
