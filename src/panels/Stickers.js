@@ -59,17 +59,17 @@ const Stickers = props => {
             </PanelHeader>
             {showSticker ?
                 <div style={{
-                    justifyContent:"center",
+                    justifyContent: "center",
                     display: "flex", padding: "5px", alignContent: "center", maxWidth: "100%",
                 }}>
                     <div style={{
-                        justifyContent:"center",
+                        justifyContent: "center",
                         display: "flex", padding: "5px", alignContent: "center", maxWidth: "300px",
-                        maxHeight: "100%", flexDirection: "column",border: "5px",
+                        maxHeight: "100%", flexDirection: "column", border: "5px",
                         borderStyle: "solid",
                         borderColor: "#5376A2",
                         borderRadius: "10px",
-                        margin:"10px"
+                        margin: "10px"
                     }}>
                         <h1 style={{
                             width: "100%",
@@ -81,7 +81,7 @@ const Stickers = props => {
                         <img style={{
                             width: "100%",
                             height: "100%",
-                        }}  src={"https://vk.com/sticker/" + id + "/256b.png"}/>
+                        }} src={"https://vk.com/sticker/" + id + "/256b.png"}/>
                         <Button type="button" onClick={handleClose} stretched size="l" mode="secondary"
                                 style={{marginTop: "4px"}}>
                             Спасибо! Вернуться в магазин.
@@ -93,32 +93,37 @@ const Stickers = props => {
                 <div style={{display: "grid", padding: "5px"}}>
                     {stickers.map(sticker =>
                         <div style={{
-                            display: "flex",
-                            flexDirection: "column",
-                            width: "300px",
-                            height: "400px",
-                            margin: "10px",
-                            padding: "5px",
-                            paddingBottom: "20px",
-                            border: "5px",
-                            borderStyle: "solid",
-                            borderColor: "#5376A2",
-                            borderRadius: "10px"
-                        }} key={sticker.id}>
-                            <h2 style={{
-                                width: "100%",
-                                textAlign: "center",
-                                alignContent: "center"
-                            }}>
-                                {sticker.name}
-                            </h2>
-                            <img style={{
+                            justifyContent: "center",
+                            display: "flex", padding: "5px", alignContent: "center", maxWidth: "100%",
+                        }}>
+                            <div style={{
+                                display: "flex",
+                                flexDirection: "column",
                                 width: "300px",
                                 height: "400px",
-                            }} src={sticker.src}/>
-                            <Button style={{marginTop: "4px"}} onClick={_ => showModal(sticker)} stretched size="l">
-                                Купи меня за {sticker.price} голосов
-                            </Button>
+                                margin: "10px",
+                                padding: "5px",
+                                paddingBottom: "20px",
+                                border: "5px",
+                                borderStyle: "solid",
+                                borderColor: "#5376A2",
+                                borderRadius: "10px"
+                            }} key={sticker.id}>
+                                <h2 style={{
+                                    width: "100%",
+                                    textAlign: "center",
+                                    alignContent: "center"
+                                }}>
+                                    {sticker.name}
+                                </h2>
+                                <img style={{
+                                    width: "300px",
+                                    height: "400px",
+                                }} src={sticker.src}/>
+                                <Button style={{marginTop: "4px"}} onClick={_ => showModal(sticker)} stretched size="l">
+                                    Купи меня за {sticker.price} голосов
+                                </Button>
+                            </div>
                         </div>
                     )}
                 </div>
@@ -127,13 +132,13 @@ const Stickers = props => {
                 <h2>
                     Вы уверены что хотите купить стикер из набора {data.name} за {data.price} голосов?
                 </h2>
-                <div style={{display:"flex", width:"100%",alignContent:"space-between",justifyContent:"center"}}>
+                <div style={{display: "flex", width: "100%", alignContent: "space-between", justifyContent: "center"}}>
                     <Button onClick={submitTransaction} stretched size="l"
-                            style={{marginLeft: "30px", marginRight: "30px", maxWidth:"200px"}}>
+                            style={{marginLeft: "30px", marginRight: "30px", maxWidth: "200px"}}>
                         Да
                     </Button>
                     <Button onClick={cancelTransaction} stretched size="l"
-                            style={{marginLeft: "30px", marginRight: "30px", maxWidth:"200px"}}>
+                            style={{marginLeft: "30px", marginRight: "30px", maxWidth: "200px"}}>
                         Нет
                     </Button>
                 </div>
