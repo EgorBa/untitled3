@@ -59,31 +59,38 @@ const Stickers = props => {
             </PanelHeader>
             {showSticker ?
                 <div style={{
-                    display: "flex", padding: "5px", alignContent: "center", maxWidth: "30%",
-                    maxHeight: "100%", flexDirection: "column",border: "5px",
-                    borderStyle: "solid",
-                    borderColor: "white",
-                    borderRadius: "10px",
-                    margin:"10px"
+                    justifyContent:"center",
+                    display: "flex", padding: "5px", alignContent: "center", maxWidth: "100%",
                 }}>
-                    <h1 style={{
-                        width: "100%",
-                        textAlign: "center",
-                        alignContent: "center"
+                    <div style={{
+                        justifyContent:"center",
+                        display: "flex", padding: "5px", alignContent: "center", maxWidth: "300px",
+                        maxHeight: "100%", flexDirection: "column",border: "5px",
+                        borderStyle: "solid",
+                        borderColor: "#5376A2",
+                        borderRadius: "10px",
+                        margin:"10px"
                     }}>
-                        Ура! Вам выпал стикер с номером {id % 200000}
-                    </h1>
-                    <img style={{
-                        width: "100%",
-                        height: "100%",
-                    }}  src={"https://vk.com/sticker/" + id + "/256b.png"}/>
-                    <Button type="button" onClick={handleClose} stretched size="l" mode="secondary"
-                            style={{marginTop: "4px"}}>
-                        Спасибо! Вернуться в магазин.
-                    </Button>
+                        <h1 style={{
+                            width: "100%",
+                            textAlign: "center",
+                            alignContent: "center"
+                        }}>
+                            Ура! Вам выпал стикер с номером {id % 200000}
+                        </h1>
+                        <img style={{
+                            width: "100%",
+                            height: "100%",
+                        }}  src={"https://vk.com/sticker/" + id + "/256b.png"}/>
+                        <Button type="button" onClick={handleClose} stretched size="l" mode="secondary"
+                                style={{marginTop: "4px"}}>
+                            Спасибо! Вернуться в магазин.
+                        </Button>
+                    </div>
                 </div>
+
                 :
-                <div style={{display: "flex", padding: "5px"}}>
+                <div style={{display: "grid", padding: "5px"}}>
                     {stickers.map(sticker =>
                         <div style={{
                             display: "flex",
@@ -95,7 +102,7 @@ const Stickers = props => {
                             paddingBottom: "15px",
                             border: "5px",
                             borderStyle: "solid",
-                            borderColor: "white",
+                            borderColor: "#5376A2",
                             borderRadius: "10px"
                         }} key={sticker.id}>
                             <h2 style={{
